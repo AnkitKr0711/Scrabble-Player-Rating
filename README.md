@@ -58,6 +58,9 @@ turns.csv - all turns from start to finish of each game
 train.csv/test.csv - final scores and ratings for each player in each game; ratings for each player are as of BEFORE the game was played
 
   game_id:- Unique id for the game
+  
   nickname:- Player's username on woogles.io
+  
   score:- Final score for each player for each game.
+  
   rating:- Player's rating on woogles.io BEFORE the game was played; 
