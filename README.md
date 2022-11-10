@@ -1,38 +1,36 @@
-# Global_Air_Pollution-
-Contains AQI values of different pollutants for many cities all over the world
+# Scrabble Player Rating
 
-![dataset-cover](https://user-images.githubusercontent.com/111516810/201015861-4b1fff17-62b3-4dd1-bf2b-489ac7c53b8b.png)
+The dataset is combination of 3 tables name as game turns and train/test includes information about 73,000 Scrabble games played by three bots on Woogles.io: bot can be set for beginner intermediate and advanced level The games are between the bots and their opponents who are regular registered users. by using metadata about the games as well as turns in each game (players' racks and where and what they played) to predict the rating of the player
 
-Airborne particulate matter (PM) is not a single pollutant, but rather is a mixture of many chemical species. It is a complex mixture of solids and aerosols composed of small droplets of liquid, dry solid fragments, and solid cores with liquid coatings. Particles vary widely in size, shape. Those with a diameter of 10 microns or less (PM10) are inhalable into the lungs and can induce adverse health effects. Fine particulate matter is defined as particles that are 2.5 microns or less in diameter (PM2.5).
 
-AQI informs the public on how polluted the air is at any given time.and it is calculated based on five categories of pollution: ground-level ozone, particulate matter, carbon monoxide, sulfur dioxide, and nitrogen dioxide. Each is measured and weighed differently, and the final product is a generalization of the current air quality.
+MetaData
 
-AQI is divided into six categories.
-
-![AQI](https://user-images.githubusercontent.com/111516810/201016976-d065be7a-fbaf-4a0d-a490-8f6e1413940c.png)
-
-Features of dataset on the basic of which we will calculate the 
-
-Country : Name of the country
-
-City : Name of the city
-
-AQI Value : Overall AQI value of the city
-
-AQI Category : Overall AQI category of the city
-
-CO AQI Value : AQI value of Carbon Monoxide of the city
-
-CO AQI Category : AQI category of Carbon Monoxide of the city
-
-Ozone AQI Value : AQI value of Ozone of the city
-
-Ozone AQI Category : AQI category of Ozone of the city
-
-NO2 AQI Value : AQI value of Nitrogen Dioxide of the city
-
-NO2 AQI Category : AQI category of Nitrogen Dioxide of the city
-
-PM2.5 AQI Value : AQI value of Particulate Matter with a diameter of 2.5 micrometers or less of the city
-
-PM2.5 AQI Category : AQI category of Particulate Matter with a diameter of 2.5 micrometers or less of the city
+games.csv - metadata about games (e.g., who went first, time controls)
+  game_id Unique id for the game
+  
+  first Which player went first
+  
+  time_control_name Name of time control used ("regular", "rapid", or "blitz")
+  
+  game_end_reason How the game ended
+  
+  winner Who won the game
+  
+  created_at When the game was created
+  
+  lexicon English lexicon used in the game ("CSW19", "NWL20", "CSW21")
+  
+  initial_time_seconds Time limit each player has in the game (defines the time control name)
+  
+  increment_seconds Time increment each player gets each time they play a turn
+  
+  rating_mode Whether the game counts towards player ratings or not ("RATED", "CASUAL")
+  
+  max_overtime_minutes How far past the initial time limit players can go before they timeout
+  
+  game_duration_seconds How long the game lasted
+  
+turns.csv - all turns from start to finish of each game
+train.csv - final scores and ratings for each player in each game; ratings for each player are as of BEFORE the game was played
+test.csv - final scores and ratings for each player in each game; ratings for each player are as of BEFORE the game was played
+sample_submission.csv - a sample submission file in the correct format
