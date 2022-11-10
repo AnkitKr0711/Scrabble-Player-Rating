@@ -11,7 +11,7 @@ AQI is divided into six categories.
 
 ![AQI](https://user-images.githubusercontent.com/111516810/201016976-d065be7a-fbaf-4a0d-a490-8f6e1413940c.png)
 
-Features of dataset
+Features of dataset on the basic of which we will calculate the 
 
 Country : Name of the country
 
