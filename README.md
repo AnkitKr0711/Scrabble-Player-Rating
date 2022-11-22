@@ -7,3 +7,5 @@ The dataset is combination of 3 tables name as game turns and train/test include
 Coding platform :- Microsoft SQL server Management System
 
 Coding platform :-  Python 3.9.7
+
+WORK IN PROGRESS
